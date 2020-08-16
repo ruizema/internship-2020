@@ -1,7 +1,7 @@
 import numpy as np
 import pandas as pd
 import pickle
-from transforms import transform_log10, norm_1
+from transforms import transform_log10, norm_1, norm_2, norm_3
 # Loading kmer table
 with open('data/km_table_flt3.py', 'rb') as f:
     kmer_table = pickle.load(f)
