@@ -12,9 +12,9 @@ patients = patient_table.index.values
 flt3 = [(-1 if i == '-' else int(i)) for i in patient_table['FLT3-ITD mutation']]
 # Filtering out patients with no data
 kmer_table_filtered = kmer_table.copy()
-for row in flt3:
+for i, row in enumerate(flt3):
     if row == -1:
-        kmer_table_filtered = kmer_table_filtered.drop(kmer_table_filtered.index[row])
+        kmer_table_filtered = kmer_table_filtered.drop(i)
 patient_list_filtered = []
 flt3_filtered = []
 for i in range(len(flt3)):
